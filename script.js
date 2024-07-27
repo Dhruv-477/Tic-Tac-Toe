@@ -25,11 +25,15 @@ const new_game_btn = () => {
     enable();
 }
 const reset = () => {
-    confirm("It will remove all current data !");
-    turn = true;
-    player.innerText = "Player 1 turn !";
-    enable();
-    for_reset_btn();
+    let confirmation = confirm("It will remove all current data !");
+    if (confirmation){
+        turn = true;
+        player.innerText = "Player 1 turn !";
+        enable();
+        for_reset_btn();
+    }else{
+        alert("Dekh Dekh Dekh .... Naa maane");
+    }
 }
 
 let turn = true;
